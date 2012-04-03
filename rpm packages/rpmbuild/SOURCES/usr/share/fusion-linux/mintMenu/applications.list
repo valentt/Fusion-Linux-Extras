@@ -1,0 +1,17 @@
+location:/usr/share/applications/chromium-browser.desktop
+location:/usr/share/applications/fedora-empathy.desktop
+location:/usr/share/applications/skype.desktop
+location:/usr/share/applications/miro.desktop
+location:/usr/share/applications/fedora-gwibber.desktop
+separator
+location:/usr/share/applications/gnome-banshee-1.desktop
+location:/usr/share/applications/kde4/k3b.desktop
+location:/usr/share/applications/openoffice.org-writer.desktop
+separator
+location:/usr/local/share/applications/teamviewer-teamviewer6.desktop
+location:/usr/share/applications/ailurus.desktop
+location:/usr/share/applications/gnome-system-monitor.desktop
+location:/usr/share/applications/fedora-hardinfo.desktop
+location:/usr/share/applications/kde4/filelight.desktop
+location:/usr/share/applications/display-properties.desktop
+

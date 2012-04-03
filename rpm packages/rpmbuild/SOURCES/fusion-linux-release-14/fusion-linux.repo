@@ -1,0 +1,13 @@
+[fusion-linux]
+name=Fusion Linux packages
+baseurl=http://iso.linux.hr/fusion-linux/fusion-repo/fusion-$releasever/$basearch/
+enabled=1
+skip_if_unavailable=1
+gpgcheck=0
+
+[fusion-linux-source]
+name=Fusion Linux packages - Source
+baseurl=http://iso.linux.hr/fusion-linux/fusion-repo/fusion-$releasever/SRPMS
+enabled=0
+skip_if_unavailable=1
+gpgcheck=0

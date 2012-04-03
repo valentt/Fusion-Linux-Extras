@@ -1,0 +1,25 @@
+<background>
+  <starttime>
+    <year>2010</year>
+    <month>07</month>
+    <day>27</day>
+    <hour>00</hour>
+    <minute>00</minute>
+    <second>00</second>
+  </starttime>
+
+<static>
+<duration>10000000000.0</duration>
+<file>
+	<!-- Wide 16:10 -->
+	<size width="1280" height="800">/usr/share/backgrounds/fusion-linux/16_10/fusion-linux_wide_1280_800.png</size>
+	<size width="1680" height="1050">/usr/share/backgrounds/fusion-linux/16_10/fusion-linux_wide_1680_1050.png</size>
+	<size width="1920" height="1200">/usr/share/backgrounds/fusion-linux/16_10/fusion-linux_wide_1920_1200.png</size>
+	<!-- Standard 4:3 -->
+	<size width="1600" height="1200">/usr/share/backgrounds/fusion-linux/4_3/fusion-linux_1600_1200.png</size>
+	<!-- Normalish 5:4 -->
+	<size width="1280" height="1024">/usr/share/backgrounds/fusion-linux/5_4/fusion-linux_1280_1024.png</size>
+</file>
+</static>
+
+</background>

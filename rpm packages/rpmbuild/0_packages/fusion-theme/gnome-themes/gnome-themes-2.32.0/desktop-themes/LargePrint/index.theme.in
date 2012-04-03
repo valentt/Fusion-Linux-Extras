@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+_Name=Large Print
+_Comment=Large text and icons
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=LargePrint
+IconTheme=LargePrint
+MetacityTheme=Atlanta
+ApplicationFont=sans 18
+DocumentsFont=sans 18
+DesktopFont=sans 18
+WindowTitleFont=sans 18
+MonospaceFont=monospace 18
+CursorTheme=whiteglass
+CursorSize=48

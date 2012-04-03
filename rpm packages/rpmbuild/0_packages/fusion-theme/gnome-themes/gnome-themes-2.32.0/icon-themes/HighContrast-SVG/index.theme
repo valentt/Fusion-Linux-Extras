@@ -1,0 +1,299 @@
+[Icon Theme]
+Name=HighContrast-SVG
+Name[ar]=رسومات متّجهية عالية التباين
+Name[as]=HighContrast-SVG
+Name[ast]=Altu contraste-SVG
+Name[be]=Высокі кантраст-SVG
+Name[be@latin]=Vysoki kantrast-SVG
+Name[bg]=Висок контраст — SVG
+Name[bn]=উচ্চ বৈশাদৃশ্য-SVG
+Name[bn_IN]=HighContrast-SVG
+Name[br]=DargemmUhel-SVG
+Name[ca]=ContrastAlt-SVG
+Name[ca@valencia]=ContrastAlt-SVG
+Name[crh]=Yüksek Tezat SVG
+Name[cs]=Vysoký kontrast SVG
+Name[da]=Højkontrast
+Name[de]=Hoher Kontrast-SVG
+Name[dz]=ཚོན་མདངས་ཆེ་བའི་-ཨེསི་ཝི་ཇི།
+Name[el]=Υψηλής αντίθεσης-SVG
+Name[en_GB]=HighContrast-SVG
+Name[es]=Alto contraste-SVG
+Name[et]=Suur kontrast - SVG
+Name[eu]=Kontraste altuko SVG
+Name[fi]=Suurikontrastinen SVG
+Name[fr]=Contraste élevé SVG
+Name[fur]=Contrast elevât - SVG
+Name[ga]=Ardchodarsnacht-SVG
+Name[gl]=SVG de alto contraste
+Name[gu]=HighContrast-SVG
+Name[he]=ניגוד גבוה-SVG
+Name[hi]=HighContrast-SVG
+Name[hr]=VelikiKontrast - SVG
+Name[hu]=Nagy kontraszt-SVG
+Name[id]=SVG-KontrasTinggi
+Name[it]=Contrasto elevato - SVG
+Name[ja]=ハイ・コントラストな SVG
+Name[kn]=ಹೆಚ್ಚುವೈದೃಶ್ಯ-SVG
+Name[ko]=고대비 SVG
+Name[lt]=Kontrastinga-SVG
+Name[lv]=AugstaKontrasta-SVG
+Name[mai]=उच्च विरोधी-SVG
+Name[mg]=Fifangarihana be-SVG
+Name[mk]=Висок контраст-SVG
+Name[ml]=മിഴിവുറ്റ-SVG
+Name[mr]=उच्च विरोधाभासमान-SVG
+Name[nb]=Høy kontrast SVG
+Name[nds]=Hoher Kontrast - SVG
+Name[ne]=उच्च व्यतिरेक-SVG
+Name[nl]=Hoog contrast SVG
+Name[nn]=Høg kontrast SVG
+Name[oc]=Contraste elevat SVG
+Name[or]=ଅଧିକ ପ୍ରଭେଦ ବିଶିଷ୍ଟ-SVG
+Name[pa]=ਵੱਧ ਵੱਖਰੇਵਾਂ-SVG
+Name[pl]=Wysokokontrastowe SVG
+Name[pt]=SVG-AltoContraste
+Name[pt_BR]=SVG de alto contraste
+Name[ro]=ContrastMare-SVG
+Name[ru]=Высококонтрастная SVG
+Name[si]=උපරිම විභේදනය-SVG
+Name[sk]=Vysokokontrastné-SVG
+Name[sl]=Visok kontrast-SVG
+Name[sq]=Kontrast i lartë - SVG
+Name[sr]=Велики контраст SVG
+Name[sr@latin]=Veliki kontrast SVG
+Name[sv]=Hög kontrast-SVG
+Name[ta]=உயர் மாறுபாடு-எஸ்விஜி(SVG)
+Name[te]=HighContrast-SVG
+Name[th]=สีตัดกัน-SVG
+Name[tr]=Yüksek Zıtlık SVG
+Name[uk]=Висококонтрастна-SVG
+Name[vi]=Độ tương phản cao-SVG
+Name[zh_CN]=高对比 SVG
+Name[zh_HK]=高對比-SVG
+Name[zh_TW]=高對比-SVG
+Comment=High contrast scalable icons with black borders
+Comment[af]=Ikone met hoë kontras en swart rante
+Comment[ar]=أيقونات متغيرة الحجم ذات تباين عال مع حدود سوداء
+Comment[as]=ক'লা প্ৰান্তৰেখাসহ গাঢ় তাৰতম্যৰ প্ৰসাৰণযোগ্য আইকন
+Comment[ast]=Iconos escalables d'altu contraste con bordes prietos
+Comment[be]=Кантрастныя маштабаваныя значкі з чорнымі межамі
+Comment[be@latin]=Maštabavalnyja ikony vysokaha kantrastu z čornymi krajami
+Comment[bg]=Висок контраст с мащабируеми икони с черни контури
+Comment[bn]=কালো প্রান্ত বেষ্টিত উচ্চ বৈশাদৃশ্যের আকার পরিবর্তনীয় আইকন
+Comment[bn_IN]=কালো প্রান্তরেখাসহ গাঢ় তারতম্যের প্রসারণযোগ্য আইকন
+Comment[ca]=Icones escalables de contrast alt amb vores negres
+Comment[ca@valencia]=Icones escalables de contrast alt amb vores negres
+Comment[crh]=Qara sıñırlar ile yüksek tezatlı miqyaslanabilir işaretçikler
+Comment[cs]=Vysoce kontrastní škálovatelné ikony s černými okraji
+Comment[da]=Højkontrast skalerbare ikoner med sorte kanter
+Comment[de]=Skalierbare Symbole mit hohem Kontrast und schwarzen Rahmen
+Comment[dz]=ཚོན་མདངས་ཆེ་བའི་ ཚད་འཇལ་བཏུབ་པའི་ངོས་དཔར་ མཐའ་མཚམས་གནགཔོ་དང་བཅས།
+Comment[el]=Υψηλής αντίθεσης scalable εικονίδια με μαύρο περίγραμμα
+Comment[en_GB]=High contrast scalable icons with black borders
+Comment[es]=Iconos escalables de alto contraste con bordes negros
+Comment[et]=Musta äärisega, suure kontrastiga  skaleeruvad ikoonid 
+Comment[eu]=Kontraste altuko ikono eskalagarriak (ertz beltzak)
+Comment[fi]=Suurikontrastiset skaalattavat kuvat mustilla reunuksilla
+Comment[fr]=Icônes échelonnables avec un contraste élevé et des bordures noires
+Comment[fur]=Iconis scalabilis a contrast elevât cun ôrs neris
+Comment[ga]=Deilbhíní inscálaithe ardchodarsnachta le himill dubha
+Comment[gl]=Iconas escalábeis de alto contraste con bordos negros
+Comment[gu]=કાળી કિનારીઓ સાથે ઉચ્ચ વિરોધાભાસવાળા ખેંચી શકાય તેવા ચિહ્નો
+Comment[he]=סמלי SVG בניגוד גבוה עם מסגרות שחורות
+Comment[hi]=काले किनारे के साथ विरोधी अनुमापक आइकन
+Comment[hr]=Skalabilne ikone velikog konstrasta sa crnim rubovima
+Comment[hu]=Nagy kontrasztú átméretezhető ikonok fekete körvonalakkal
+Comment[id]=Ikon dapat direntang kontras tinggi dengan tepi hitam
+Comment[it]=Icone scalabili a contrasto elevato con bordi neri
+Comment[ja]=黒色の境界線を持ち大きさを変更できるハイ・コントラストなアイコン
+Comment[kn]=ಕಪ್ಪು ಅಂಚುಗಳೊಂದಿಗೆ ಹೆಚ್ಚು ವೈದೃಶ್ಯದ (ಕಾಂಟ್ರಾಸ್ಟಿನ) ಗಾತ್ರ ಬದಲಿಸಬಹುದಾದ ಚಿಹ್ನೆಗಳು
+Comment[ko]=검은색 윤곽선이 있는 고대비 크기 조절 가능 아이콘
+Comment[lt]=Didelio kontrasto keičiamo dydžio ikonos juodais rėmeliais
+Comment[lv]=Augsta kontrasta mērogojamas ikonas ar melnām malām
+Comment[mai]=करिया किनार क' सँग विरोधी अनुमापक आइकन
+Comment[mg]=Kisary be fifangarihana azo alehibiazina, misy sisiny mainty
+Comment[mk]=Висок контраст, скалабилни икони со црна граница
+Comment[ml]=വലുപ്പം ക്രമീകരിയ്ക്കാവുന്ന കറുത്ത വരമ്പുകളുളള മിഴിവുറ്റ രൂപങ്ങള്‍
+Comment[mr]=काळ्या किनारीसह वाढवण्याजोगी उच्च विरोधाभास चिन्हे
+Comment[nb]=Skalerbare ikoner med høy kontrast og sort kant
+Comment[nds]=Lütje, skalierbare Billers mit hohem Kontrast un schwatten Rahmen
+Comment[ne]=कालो किनारा भएको उच्च व्यतिरेक मापनयोग्य प्रतिमा
+Comment[nl]=Hoog contrast pictogrammen met zwarte randen
+Comment[nn]=Skalerbare ikon med høg kontrast og svart kant
+Comment[oc]=Icònas escalonablas amb un contraste elevat e de bordaduras negras
+Comment[or]=କଳା ଧାର ସହିତ ଅଧିକ ପ୍ରଭେଦ ଆକାର ବଦଳକ୍ଷମ ଟିତ୍ରସଙ୍କେତ
+Comment[pa]=ਕਾਲੇ ਹਾਸ਼ੀਏ ਨਾਲ ਉੱਚ ਵੱਖਰੇਵਾ ਸਕੇਲਯੋਗ ਆਈਕਾਨ
+Comment[pl]=Wysokokontrastowe skalowalne ikony z czarną obwódką
+Comment[pt]=Ícones escaláveis de alto contraste com margens negras
+Comment[pt_BR]=Ícones escaláveis de alto contraste com bordas negras
+Comment[ro]=Pictograme scalabile de contrast mare cu margini negre
+Comment[ru]=Высококонтрастные масштабируемые значки с чёрными рамками
+Comment[si]=උපරිම විභේදනයෙන් යුත් සංකේත සමඟ කළු තීරු
+Comment[sk]=Vysokokontrastné ikony so zmeniteľnou veľkosťou a čiernymi okrajmi
+Comment[sl]=Vektorske ikone v visokem kontrastu s črnimi okvirji
+Comment[sq]=Ikona të shkallëzueshme me kontrast të lartë me korniza të zeza
+Comment[sr]=Увећани контраст са црним ивицама и растегљивим иконицама
+Comment[sr@latin]=Uvećani kontrast sa crnim ivicama i rastegljivim ikonicama
+Comment[sv]=Skalbara ikoner med hög konstrast med svarta kanter
+Comment[ta]=கறுப்பு எல்லையுடன் அதிக அடர்த்தியுள்ள சின்னங்கள்
+Comment[te]=నల్లని హద్దులతో కొలత చేయగల అధిక కాంట్రాస్టు ప్రతిమలు
+Comment[th]=ไอคอนปรับอัตราส่วนได้สีตัดกัน และตัดเส้นขอบสีดำ
+Comment[tr]=Siyah kenarlıklarla yüksek zıtlıkla ölçeklenebilir simgeler
+Comment[uk]=Висококонтрастні значки з чорними краями зі змінним масштабом
+Comment[vi]=Biểu tượng co dãn đưọc, độ tương phản cao, với viền màu đen
+Comment[zh_CN]=高对比度可缩放图标，带黑色边框
+Comment[zh_HK]=帶黑邊的高對比圖示，可自由放大縮小
+Comment[zh_TW]=帶黑邊的高對比圖示，可自由放大縮小
+Inherits=gnome,crystalsvg
+Example=folder
+
+# KDE Specific Stuff from Tango
+DisplayDepth=32
+LinkOverlay=link_overlay
+LockOverlay=lock_overlay
+ZipOverlay=zip_overlay
+DesktopDefault=48
+DesktopSizes=16,22,32,48,64,72,96,128
+ToolbarDefault=22
+ToolbarSizes=16,22,32,48
+MainToolbarDefault=22
+MainToolbarSizes=16,22,32,48
+SmallDefault=16
+SmallSizes=16
+PanelDefault=32
+PanelSizes=16,22,32,48,64,72,96,128
+# End KDE Specific Stuff
+
+Directories=scalable/actions,scalable/apps,scalable/categories,scalable/devices,scalable/emblems,scalable/emotes,scalable/mimetypes,scalable/places,scalable/status,48x48/animations,scalable/actions-extra,scalable/apps-extra,scalable/categories-extra,scalable/devices-extra,scalable/emblems-extra,scalable/emotes-extra,scalable/mimetypes-extra,scalable/places-extra,scalable/status-extra
+
+[scalable/actions]
+Size=48
+Context=Actions
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/apps]
+Size=48
+Context=Applications
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/categories]
+Size=48
+Context=Categories
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/devices]
+Size=48
+Context=Devices
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/emblems]
+Size=48
+Context=Emblems
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/emotes]
+Size=48
+Context=Emotes
+Type=Scalable
+Minsize=12
+MaxSize=256
+
+[scalable/mimetypes]
+Size=48
+Context=MimeTypes
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/places]
+Size=48
+Context=Places
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/status]
+Size=48
+Context=Status
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[48x48/animations]
+Size=48
+Context=Animations
+Type=Scalable
+
+[scalable/actions-extra]
+Size=48
+Context=Actions
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/apps-extra]
+Size=48
+Context=Applications
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/categories-extra]
+Size=48
+Context=Categories
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/devices-extra]
+Size=48
+Context=Devices
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/emblems-extra]
+Size=48
+Context=Emblems
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/emotes-extra]
+Size=48
+Context=Emotes
+Type=Scalable
+Minsize=12
+MaxSize=256
+
+[scalable/mimetypes-extra]
+Size=48
+Context=MimeTypes
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/places-extra]
+Size=48
+Context=Places
+Type=Scalable
+MinSize=12
+MaxSize=256
+
+[scalable/status-extra]
+Size=48
+Context=Status
+Type=Scalable
+MinSize=12
+MaxSize=256

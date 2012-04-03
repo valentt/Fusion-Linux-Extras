@@ -1,0 +1,6 @@
+[playonlinux]
+name=PlayOnLinux Official repo
+baseurl=http://rpm.playonlinux.com/fedora/yum/base
+enable=1
+gpgcheck=0
+gpgkey=http://mulx.playonlinux.com/rpm/rpm.gpg

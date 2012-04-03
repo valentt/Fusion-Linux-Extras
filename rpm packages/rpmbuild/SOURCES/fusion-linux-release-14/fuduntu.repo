@@ -1,0 +1,28 @@
+[fuduntu]
+name=Fuduntu $releasever - $basearch
+baseurl=http://www.fuduntu.org/fuduntu/$releasever/STABLE/RPMS
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fuduntu-$basearch
+includepkgs=openshot,mlt,mlt-python,photofilmstrip,likewise*,jupiter*
+
+[fuduntu-source]
+name=Fuduntu $releasever - Source
+baseurl=http://www.fuduntu.org/fuduntu/$releasever/STABLE/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fuduntu-$basearch
+
+[fuduntu-testing]
+name=Fuduntu $releasever Testing - $basearch
+baseurl=http://www.fuduntu.org/fuduntu/$releasever/TESTING/RPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fuduntu-$basearch
+
+[fuduntu-testing-source]
+name=Fuduntu $releasever Testing - Source
+baseurl=http://www.fuduntu.org/fuduntu/$releasever/TESTING/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fuduntu-$basearch

@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Comment=
+Encoding=UTF-8
+Exec=/usr/bin/get-live-help
+GenericName=Get Live Help with Fusion Linux - Join us on IRC
+Icon=empathy
+MimeType=
+Name=Get Live Help
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DCOP-ServiceType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Categories=Application;Network;

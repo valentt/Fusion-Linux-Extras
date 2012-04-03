@@ -1,0 +1,25 @@
+diff --git a/usr/lib/bonobo/servers/mintMenu.server b/usr/lib/bonobo/servers/mintMenu.server
+index 1a3a169..a5df00c 100755
+--- a/usr/lib/bonobo/servers/mintMenu.server
++++ b/usr/lib/bonobo/servers/mintMenu.server
+@@ -21,6 +21,6 @@
+         <oaf_attribute name="name" type="string" value="mintMenu"/>
+         <oaf_attribute name="description" type="string" value="Advanced Gnome Menu"/>
+         <oaf_attribute name="panel:category" type="string" value="Utilities"/>
+-        <oaf_attribute name="panel:icon" type="string" value="/usr/lib/linuxmint/mintMenu/mint-logo.svg"/>
++        <oaf_attribute name="panel:icon" type="string" value="/usr/share/icons/Gilouche/24x24/places/gnome-main-menu.png"/>
+ </oaf_server>
+ </oaf_info>
+diff --git a/usr/lib/linuxmint/mintMenu/mintMenu.py b/usr/lib/linuxmint/mintMenu/mintMenu.py
+index 95e0831..9179103 100755
+--- a/usr/lib/linuxmint/mintMenu/mintMenu.py
++++ b/usr/lib/linuxmint/mintMenu/mintMenu.py
+@@ -798,7 +798,7 @@ class MenuWin( object ):
+ 		about.set_authors( ["Clement Lefebvre <clem@linuxmint.com>", "Lars-Peter Clausen <lars@laprican.de>"] )
+ 		about.set_translator_credits(("translator-credits") )
+ 		about.set_copyright( _("Based on USP from S.Chanderbally") )
+-		about.set_logo( gtk.gdk.pixbuf_new_from_file("/usr/lib/linuxmint/mintMenu/icon.svg") )
++		about.set_logo( gtk.gdk.pixbuf_new_from_file("/usr/share/icons/Gilouche/24x24/places/gnome-main-menu.png") )
+ 		about.connect( "response", lambda dialog, r: dialog.destroy() )
+ 		about.show()
+ 

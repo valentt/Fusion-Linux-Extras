@@ -1,0 +1,12 @@
+[X-GNOME-Metatheme]
+Name=Fusion
+Comment=Fusion Linux default theme
+Type=X-GNOME-Metatheme
+Encoding=UTF-8
+GtkTheme=Clearlooks
+MetacityTheme=Alliance-fusion-fancy
+IconTheme=Faenza-Fusion
+NotificationTheme=slider
+CursorTheme=dmz-aa
+CursorSize=24
+

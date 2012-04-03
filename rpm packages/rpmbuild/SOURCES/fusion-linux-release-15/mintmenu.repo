@@ -1,0 +1,8 @@
+[mintMenu]
+name=mintMenu
+type=rpm-md
+baseurl=http://download.opensuse.org/repositories/home:/unamanic/Fedora_$releasever/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/home:/unamanic/Fedora_$releasever/repodata/repomd.xml.key
+enabled=1
+#exclude=mintmenu-5*

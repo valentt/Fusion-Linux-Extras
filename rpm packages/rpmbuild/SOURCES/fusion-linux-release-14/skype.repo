@@ -1,0 +1,7 @@
+[skype]
+name=Skype Repository
+baseurl=http://download.skype.com/linux/repos/fedora/updates/i586/
+#gpgkey=http://www.skype.com/products/skype/linux/rpm-public-key.asc
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-skype
+enabled=1
+gpgcheck=0

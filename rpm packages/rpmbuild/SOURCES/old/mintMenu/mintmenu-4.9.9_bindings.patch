@@ -1,0 +1,255 @@
+diff --git a/usr/lib/linuxmint/mintMenu/mintRemove.py b/usr/lib/linuxmint/mintMenu/mintRemove.py
+index d97f340..1344ff6 100755
+--- a/usr/lib/linuxmint/mintMenu/mintRemove.py
++++ b/usr/lib/linuxmint/mintMenu/mintRemove.py
+@@ -1,4 +1,5 @@
+ #!/usr/bin/env python
++from packagekit.enums import FILTER_INSTALLED
+ 
+ try:
+      import pygtk
+@@ -30,124 +31,93 @@ gettext.install("mintmenu", "/usr/share/linuxmint/locale")
+ class RemoveExecuter(threading.Thread):
+ 
+     def __init__(self, window_id, package):
+-	threading.Thread.__init__(self)
+-	self.window_id = window_id
+-	self.package = package
++    	threading.Thread.__init__(self)
++    	self.window_id = window_id
++    	self.package = package
+     
+     def execute(self, command):
+-	#print "Executing: " + command
+-	os.system(command)
+-	ret = commands.getoutput("echo $?")
+-	return ret
++    	#print "Executing: " + command
++    	os.system(command)
++    	ret = commands.getoutput("echo $?")
++    	return ret
+ 
+     def run(self):	
+-	removePackages = string.split(self.package)
+-	cmd = ["sudo", "/usr/sbin/synaptic", "--hide-main-window",  \
+-	        "--non-interactive", "--parent-window-id", self.window_id]
+-	cmd.append("--progress-str")
+-	cmd.append("\"" + _("Please wait, this can take some time") + "\"")
+-	cmd.append("--finish-str")
+-	cmd.append("\"" + _("Application removed successfully") + "\"")
+-	f = tempfile.NamedTemporaryFile()
+-	for pkg in removePackages:
+-            f.write("%s\tdeinstall\n" % pkg)
+-        cmd.append("--set-selections-file")
+-        cmd.append("%s" % f.name)
+-        f.flush()
+-        comnd = Popen(' '.join(cmd), shell=True)
+-	returnCode = comnd.wait()
+-	f.close()
+-	gtk.main_quit()
+-	sys.exit(0)
++    	removePackages = self.package
++
++        from packagekit.client import PackageKitClient
++        from packagekit.enums import *
++        
++        pk = PackageKitClient()
++        
++        #print '---- Remove -------'
++        pk.remove_packages(removePackages)
++        
++    	gtk.main_quit()
++    	sys.exit(0)
+ 		
+ class mintRemoveWindow:
+ 
+     def __init__(self, desktopFile):
+-	self.desktopFile = desktopFile	
+-
++    	self.desktopFile = desktopFile	
++    
+         #Set the Glade file
+         self.gladefile = "/usr/lib/linuxmint/mintMenu/mintRemove.glade"
+         wTree = gtk.glade.XML(self.gladefile,"main_window")
+-	wTree.get_widget("main_window").set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
+-	wTree.get_widget("main_window").set_title("")
+-	wTree.get_widget("main_window").connect("destroy", self.giveUp)
+-
+-	# Get the window socket (needed for synaptic later on)
+-	vbox = wTree.get_widget("vbox1")
+-	socket = gtk.Socket()
+-	vbox.pack_start(socket)
+-	socket.show()
+-	window_id = repr(socket.get_id())
++    	wTree.get_widget("main_window").set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
++    	wTree.get_widget("main_window").set_title("")
++    	wTree.get_widget("main_window").connect("destroy", self.giveUp)
++    
++    	# Get the window socket (needed for synaptic later on)
++    	vbox = wTree.get_widget("vbox1")
++    	socket = gtk.Socket()
++    	vbox.pack_start(socket)
++    	socket.show()
++    	window_id = repr(socket.get_id())
++            
++        from packagekit.client import PackageKitClient
++        from packagekit.enums import *
+         
+-	
+-	
+-	package = commands.getoutput("dpkg -S " + self.desktopFile)
+-	package = package[:package.find(":")]
+-	if package == "dpkg":
+-		warnDlg = gtk.Dialog(title="MintMenu", parent=None, flags=0, buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL))
+-		warnDlg.add_button(gtk.STOCK_REMOVE, gtk.RESPONSE_OK)
+-		warnDlg.vbox.set_spacing(10)
+-		warnDlg.set_icon_from_file("/usr/share/linuxmint/logo.png")
+-		labelSpc = gtk.Label(" ")
+-		warnDlg.vbox.pack_start(labelSpc)	
+-		labelSpc.show()
+-		warnText = "<b>" + _("No matching package found") + "</b>"
+-		infoText = _("Do you want to remove this menu entry?") + " (" + self.desktopFile + ")"
+-		label = gtk.Label(warnText)
+-		lblInfo = gtk.Label(infoText)
+-		label.set_use_markup(True)
+-		lblInfo.set_use_markup(True)
+-		warnDlg.vbox.pack_start(label)
+-		warnDlg.vbox.pack_start(lblInfo)
+-		label.show()
+-		lblInfo.show()
+-		response = warnDlg.run()
+-		if response == gtk.RESPONSE_OK :
+-			print "removing " + self.desktopFile + "*.desktop"
+-			os.system("rm -f " + self.desktopFile)
+-			os.system("rm -f " + self.desktopFile + "*.desktop")
+-		warnDlg.destroy()
+-		gtk.main_quit()
+-		sys.exit(0)		
+-
+-	wTree.get_widget("txt_name").set_text("<big><b>" + _("Remove %s?") % package + "</b></big>")
+-	wTree.get_widget("txt_name").set_use_markup(True)
+-		
+-	wTree.get_widget("txt_guidance").set_text(_("The following packages will be removed:"))
+-	
+-	treeview = wTree.get_widget("tree")
+-	column1 = gtk.TreeViewColumn(_("Packages to be removed"))
+-	renderer = gtk.CellRendererText()
+-	column1.pack_start(renderer, False)
+-	column1.set_attributes(renderer, text = 0)
+-	treeview.append_column(column1)
+-
+-	model = gtk.ListStore(str)
+-	dependenciesString = commands.getoutput("apt-get -s -q remove " + package + " | grep Remv")
+-	dependencies = string.split(dependenciesString, "\n")
+-	for dependency in dependencies:
+-		dependency = dependency.replace("Remv ", "")
+-		model.append([dependency])
+-	treeview.set_model(model)
+-	treeview.show()		
+-
++        pk = PackageKitClient()
++        
++        package = pk.search_file(self.desktopFile, FILTER_INSTALLED)
++        print package[0]
++          
++        wTree.get_widget("txt_name").set_text("<big><b>" + _("Remove %s?") % package[0] + "</b></big>")
++        wTree.get_widget("txt_name").set_use_markup(True)
++            
++        wTree.get_widget("txt_guidance").set_text(_("The following packages will be removed:"))
++        
++        treeview = wTree.get_widget("tree")
++        column1 = gtk.TreeViewColumn(_("Packages to be removed"))
++        renderer = gtk.CellRendererText()
++        column1.pack_start(renderer, False)
++        column1.set_attributes(renderer, text = 0)
++        treeview.append_column(column1)
++    
++        model = gtk.ListStore(str)
++        dependencies = pk.get_requires(package, FILTER_INSTALLED, True)
++        for dependency in dependencies:
++            model.append([dependency])
++        treeview.set_model(model)
++        treeview.show()        
++   
+         dic = {"on_remove_button_clicked" : (self.MainButtonClicked, window_id, package, wTree),
+-               "on_cancel_button_clicked" : (self.giveUp) }
++                   "on_cancel_button_clicked" : (self.giveUp) }
+         wTree.signal_autoconnect(dic)
+-
+-	wTree.get_widget("main_window").show()
++    
++        wTree.get_widget("main_window").show()
+ 
+ 
+     def MainButtonClicked(self, widget, window_id, package, wTree):
+-	wTree.get_widget("main_window").window.set_cursor(gtk.gdk.Cursor(gtk.gdk.WATCH))
+-	wTree.get_widget("main_window").set_sensitive(False)
+-	executer = RemoveExecuter(window_id, package)
+-	executer.start()
+-	return True
++        wTree.get_widget("main_window").window.set_cursor(gtk.gdk.Cursor(gtk.gdk.WATCH))
++        wTree.get_widget("main_window").set_sensitive(False)
++        executer = RemoveExecuter(window_id, package)
++        executer.start()
++        return True
+ 
+     def giveUp(self, widget):
+-	gtk.main_quit()
+-	sys.exit(0)
++        gtk.main_quit()
++        sys.exit(0)
+ 
+ if __name__ == "__main__":
+     mainwin = mintRemoveWindow(sys.argv[1])
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py b/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py
+index cc4a3ff..5312877 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/easybuttons.py
+@@ -386,7 +386,7 @@ class ApplicationLauncher( easyButton ):
+ 				Execute(self.appExec)
+ 
+ 	def uninstall (self, *args ):
+-		Execute("gksu /usr/lib/linuxmint/mintMenu/mintRemove.py " + self.desktopFile)
++		Execute("/usr/lib/linuxmint/mintMenu/mintRemove.py " + self.desktopFile)
+ 
+ 	# IconTheme changed, setup new icons for button and drag 'n drop
+ 	def iconChanged( self ):
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/system_management.py b/usr/lib/linuxmint/mintMenu/plugins/system_management.py
+index deff466..d79d736 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/system_management.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/system_management.py
+@@ -130,19 +130,19 @@ class pluginclass( object ):
+ 	def do_standard_items( self ):		
+ 
+ 		if ( self.showSoftwareManager == True ):
+-			if os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg"):
+-				Button1 = easyButton( "/usr/lib/linuxmint/mintInstall/icon.svg", self.iconsize, [_("Software Manager")], -1, -1 )
+-				Button1.connect( "clicked", self.ButtonClicked, "mintinstall" )
++			if os.path.exists("/usr/share/icons/gnome/32x32/apps/system-software-install.png"):
++				Button1 = easyButton( "/usr/share/icons/gnome/32x32/apps/system-software-install.png", self.iconsize, [_("Software Manager")], -1, -1 )
++				Button1.connect( "clicked", self.ButtonClicked, "gpk-application" )
+ 				Button1.show()
+ 				self.systemBtnHolder.pack_start( Button1, False, False )
+ 				self.mintMenuWin.setTooltip( Button1, _("Browse and install available software") )
+ 
+ 		if ( self.showPackageManager == True ):
+-			Button2 = easyButton( "synaptic", self.iconsize, [_("Package Manager")], -1, -1 )
+-			Button2.connect( "clicked", self.ButtonClicked, "gksu /usr/sbin/synaptic" )
++			Button2 = easyButton( "/usr/share/icons/gnome/32x32/apps/system-software-update.png", self.iconsize, [_("Update System")], -1, -1 )
++			Button2.connect( "clicked", self.ButtonClicked, "gpk-update-viewer" )
+ 			Button2.show()
+ 			self.systemBtnHolder.pack_start( Button2, False, False )
+-			self.mintMenuWin.setTooltip( Button2, _("Install, remove and upgrade software packages") )
++			self.mintMenuWin.setTooltip( Button2, _("Upgrade software packages") )
+ 
+ 		if ( self.showControlCenter == True ):
+ 			Button3 = easyButton( "gtk-preferences", self.iconsize, [_("Control Center")], -1, -1 )
+@@ -153,7 +153,7 @@ class pluginclass( object ):
+ 		
+ 		if ( self.showTerminal == True ):
+ 			Button4 = easyButton( "gnome-terminal", self.iconsize, [_("Terminal")], -1, -1 )
+-			Button4.connect( "clicked", self.ButtonClicked, "x-terminal-emulator" )
++			Button4.connect( "clicked", self.ButtonClicked, "gnome-terminal" )
+ 			Button4.show()
+ 			self.systemBtnHolder.pack_start( Button4, False, False )
+ 			self.mintMenuWin.setTooltip( Button4, _("Use the command line") )

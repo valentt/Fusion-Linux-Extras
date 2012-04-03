@@ -1,0 +1,5 @@
+[fedora-gimp]
+name=Development version of Gimp that will replace stable release
+baseurl=http://repos.fedorapeople.org/repos/luya/gimp/fedora-$releasever/$basearch/
+enabled=1
+gpgcheck=0

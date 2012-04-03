@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper>
+    <name>Rei Forever</name>
+    <filename>/usr/share/backgrounds/rei-forever/rei-forever.jpg</filename> 
+    <options>stretched</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Rei Forever at 5:4 Aspect Ratio</name>
+    <filename>/usr/share/backgrounds/rei-forever/rei-forever.jpg</filename>
+    <options>scale</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Rei Forever Wide</name>
+    <filename>/usr/share/backgrounds/rei-forever/rei-forever.jpg</filename> 
+    <options>stretched</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+</wallpapers>

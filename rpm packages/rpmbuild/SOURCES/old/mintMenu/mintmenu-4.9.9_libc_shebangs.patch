@@ -1,0 +1,61 @@
+diff --git a/usr/lib/linuxmint/mintMenu/mintMenu.py b/usr/lib/linuxmint/mintMenu/mintMenu.py
+index 17f73db..95e0831 100755
+--- a/usr/lib/linuxmint/mintMenu/mintMenu.py
++++ b/usr/lib/linuxmint/mintMenu/mintMenu.py
+@@ -29,13 +29,13 @@ except Exception, cause:
+         pass
+ 
+ # Rename the process
+-try:
+-	import dl
+-	libc = dl.open( "/lib/libc.so.6" )
+-	libc.call( "prctl", 15, "mintmenu", 0, 0, 0 )
+-	libc.close()
+-except ImportError:
+-	pass
++#try:
++#	import dl
++#	libc = dl.open( "/lib/libc.so.6" )
++#	libc.call( "prctl", 15, "mintmenu", 0, 0, 0 )
++#	libc.close()
++#except ImportError:
++#	pass
+ 
+ # i18n
+ gettext.install("mintmenu", "/usr/share/linuxmint/locale")
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/__init__.py b/usr/lib/linuxmint/mintMenu/plugins/__init__.py
+index e69de29..fef66b5 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/__init__.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/__init__.py
+@@ -0,0 +1 @@
++#!/usr/bin/env python
+\ No newline at end of file
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/execute.py b/usr/lib/linuxmint/mintMenu/plugins/execute.py
+index 34f9699..ccb285a 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/execute.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/execute.py
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ 
+ import os
+ import subprocess
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/filemonitor.py b/usr/lib/linuxmint/mintMenu/plugins/filemonitor.py
+index 57bd228..829367d 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/filemonitor.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/filemonitor.py
+@@ -1,3 +1,5 @@
++#!/usr/bin/env python
++
+ import os
+ import os.path
+ import threading
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/recent.py b/usr/lib/linuxmint/mintMenu/plugins/recent.py
+index 009fc1d..12d3cd9 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/recent.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/recent.py
+@@ -1,3 +1,5 @@
++#!/usr/bin/env python
++
+ import gtk
+ import gtk.glade
+ import sys

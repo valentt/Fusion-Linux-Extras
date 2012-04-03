@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper>
+    <name>Flying High</name>
+    <filename>/usr/share/backgrounds/images/default.jpg</filename> 
+    <options>stretched</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Flying High at 5:4 Aspect Ratio</name>
+    <filename>/usr/share/backgrounds/images/default-5_4.jpg</filename>
+    <options>stretched</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper>
+    <name>Flying High Wide</name>
+    <filename>/usr/share/backgrounds/images/default-wide.jpg</filename> 
+    <options>stretched</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#FFFFFF</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+</wallpapers>

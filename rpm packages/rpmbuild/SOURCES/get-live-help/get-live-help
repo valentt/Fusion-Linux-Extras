@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# This script is borrowed from Sabayon Linux project:
+# http://gitweb.sabayon.org/?p=get-live-help.git
+ 
+channel="#fusion-linux"
+irc_server="irc.freenode.net"
+title="Get Live Help"
+whoiam=$(whoami)
+if [ "$whoiam" = "liveuser" ]; then
+	nickname="liveuser-"$RANDOM
+else
+	nickname="`whoami`"$RANDOM
+fi
+
+# text mode or NOT ?
+TEXT="1"
+if [ -n "`echo $@ | grep force-text`" ]; then
+	TEXT="1"
+fi
+
+if [ -z "$DISPLAY" ]; then
+	TEXT="1"
+fi
+
+# what do I have to run?
+if [ "$TEXT" = "0" ]; then
+	# use Konversation
+	echo -e "[Flags]\nShowServerList=false" >> $HOME/.kde3.5/share/config/konversationrc
+	konversation --channel "$channel" --nick "$nickname" --server "$irc_server" --caption "Get Live Help"
+else
+	# use IRSSI
+	echo
+	echo
+	echo -e "\t You will be connected to "$irc_server" as "$nickname" be sure that"
+	echo -e "\t your Internet connection is properly configured."
+	echo -e "\t If so, just wait and remember to type:"
+	echo
+	echo -e "\t\t /j #fusion-linux"
+	echo
+	echo -e "\t When connected to the server. To quit from the application,"
+	echo -e "\t just type: /quit. Have fun!"
+	echo
+	echo
+	sleep 10
+	irssi --connect=$irc_server --nick=$nickname
+fi

@@ -1,0 +1,124 @@
+diff --git a/usr/bin/mintmenu b/usr/bin/mintmenu
+index b78ea19..938f51a 100755
+--- a/usr/bin/mintmenu
++++ b/usr/bin/mintmenu
+@@ -8,5 +8,5 @@ if len(sys.argv) > 1:
+ 		os.system("gconftool-2 --recursive-unset /apps/mintMenu")
+ 		os.system("rm -rf ~/.linuxmint/mintMenu")
+ else:
+-	os.system("/usr/lib/linuxmint/mintMenu/mintMenu.py run-in-window")
++	os.system("/usr/share/linuxmint/mintMenu/mintMenu.py run-in-window")
+ 
+diff --git a/usr/lib/bonobo/servers/mintMenu.server b/usr/lib/bonobo/servers/mintMenu.server
+index a5df00c..93b838c 100755
+--- a/usr/lib/bonobo/servers/mintMenu.server
++++ b/usr/lib/bonobo/servers/mintMenu.server
+@@ -1,6 +1,6 @@
+ <oaf_info>
+ <oaf_server iid="OAFIID:GNOME_mintMenu_Factory"
+-            type="exe" location="/usr/lib/linuxmint/mintMenu/mintMenu.py">
++            type="exe" location="/usr/share/linuxmint/mintMenu/mintMenu.py">
+ 
+         <oaf_attribute name="repo_ids" type="stringv">
+                 <item value="IDL:Bonobo/GenericFactory:1.0"/>
+diff --git a/usr/lib/linuxmint/mintMenu/mintMenu.py b/usr/lib/linuxmint/mintMenu/mintMenu.py
+index 9179103..cdd9d11 100755
+--- a/usr/lib/linuxmint/mintMenu/mintMenu.py
++++ b/usr/lib/linuxmint/mintMenu/mintMenu.py
+@@ -782,7 +782,7 @@ class MenuWin( object ):
+ 		about = gtk.AboutDialog()
+ 		about.set_name("mintMenu")
+ 		import commands
+-		version = commands.getoutput("/usr/lib/linuxmint/common/version.py mintmenu")
++		version = commands.getoutput("/usr/share/linuxmint/common/version.py mintmenu")
+ 		about.set_version(version)
+ 		try:
+            		h = open('/usr/share/common-licenses/GPL','r')
+diff --git a/usr/lib/linuxmint/mintMenu/mintMenuConfig.py b/usr/lib/linuxmint/mintMenu/mintMenuConfig.py
+index 92dc1d5..4776baa 100755
+--- a/usr/lib/linuxmint/mintMenu/mintMenuConfig.py
++++ b/usr/lib/linuxmint/mintMenu/mintMenuConfig.py
+@@ -40,7 +40,7 @@ class mintMenuConfig( object ):
+ 
+ 		#i18n
+ 		self.mainWindow.set_title(_("Menu preferences"))
+-		self.mainWindow.set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
++		self.mainWindow.set_icon_from_file("/usr/share/linuxmint/mintMenu/icon.svg")
+ 
+ 		wTree.get_widget("startWithFavorites").set_label(_("Always start with favorites pane"))
+ 		wTree.get_widget("showSidepane").set_label(_("Show sidepane"))
+@@ -160,7 +160,7 @@ class mintMenuConfig( object ):
+ 		self.systemHeightButton = wTree.get_widget( "systemHeightSpinButton" ) 
+ 		if (self.allowSystemScrollbarToggle.get_active() == False): self.systemHeightButton.set_sensitive(False)
+ 		self.allowSystemScrollbarToggle.connect("toggled", self.toggleSystemHeightEnabled )
+-		if os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg"):
++		if os.path.exists("/usr/share/linuxmint/mintInstall/icon.svg"):
+ 			wTree.get_widget( "softwaremanagercheckbutton" ).show()
+ 		else:
+ 			wTree.get_widget( "softwaremanagercheckbutton" ).hide()
+@@ -340,7 +340,7 @@ class mintMenuConfig( object ):
+ 		newPlaceDialog = wTree.get_widget( "editPlaceDialog" )
+ 		folderChooserDialog = folderChooserTree.get_widget( "fileChooserDialog" )
+ 		newPlaceDialog.set_transient_for(self.mainWindow)
+-		newPlaceDialog.set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
++		newPlaceDialog.set_icon_from_file("/usr/share/linuxmint/mintMenu/icon.svg")
+ 		newPlaceDialog.set_title(self.newPlaceDialogTitle)
+ 		folderChooserDialog.set_title(self.folderChooserDialogTitle)
+ 		newPlaceDialog.set_default_response(gtk.RESPONSE_OK)
+@@ -374,7 +374,7 @@ class mintMenuConfig( object ):
+ 		editPlaceDialog = wTree.get_widget( "editPlaceDialog" )
+ 		folderChooserDialog = folderChooserTree.get_widget( "fileChooserDialog" )
+ 		editPlaceDialog.set_transient_for(self.mainWindow)
+-		editPlaceDialog.set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
++		editPlaceDialog.set_icon_from_file("/usr/share/linuxmint/mintMenu/icon.svg")
+ 		editPlaceDialog.set_title(self.editPlaceDialogTitle)
+ 		folderChooserDialog.set_title(self.folderChooserDialogTitle)
+ 		editPlaceDialog.set_default_response(gtk.RESPONSE_OK)
+diff --git a/usr/lib/linuxmint/mintMenu/mintRemove.py b/usr/lib/linuxmint/mintMenu/mintRemove.py
+index 1344ff6..92546ba 100755
+--- a/usr/lib/linuxmint/mintMenu/mintRemove.py
++++ b/usr/lib/linuxmint/mintMenu/mintRemove.py
+@@ -63,7 +63,7 @@ class mintRemoveWindow:
+         #Set the Glade file
+         self.gladefile = "/usr/lib/linuxmint/mintMenu/mintRemove.glade"
+         wTree = gtk.glade.XML(self.gladefile,"main_window")
+-    	wTree.get_widget("main_window").set_icon_from_file("/usr/lib/linuxmint/mintMenu/icon.svg")
++    	wTree.get_widget("main_window").set_icon_from_file("/usr/share/linuxmint/mintMenu/icon.svg")
+     	wTree.get_widget("main_window").set_title("")
+     	wTree.get_widget("main_window").connect("destroy", self.giveUp)
+     
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/applications.py b/usr/lib/linuxmint/mintMenu/plugins/applications.py
+index 398fc7b..9f443c2 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/applications.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/applications.py
+@@ -625,7 +625,7 @@ class pluginclass( object ):
+ 					if (shown):
+ 						showns = True
+ 
+-				if (not showns and os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg")):					
++				if (not showns and os.path.exists("/usr/share/linuxmint/mintInstall/icon.svg")):					
+ 					self.suggestion = text
+ 
+ 					#self.applicationsBox.add(self.suggestSearchAppButton)					
+@@ -1069,7 +1069,7 @@ class pluginclass( object ):
+ 			from user import home			
+ 			if (not os.path.exists(home + "/.linuxmint/mintMenu/applications.list")):
+ 				os.system("mkdir -p " + home + "/.linuxmint/mintMenu/applications")
+-				os.system("cp /usr/lib/linuxmint/mintMenu/applications.list " + home + "/.linuxmint/mintMenu/applications.list")
++				os.system("cp /usr/share/linuxmint/mintMenu/applications.list " + home + "/.linuxmint/mintMenu/applications.list")
+ 
+ 			applicationsFile = open ( os.path.join( os.path.expanduser( "~" ), ".linuxmint", "mintMenu", "applications.list" ), "r" )
+ 			applicationsList = applicationsFile.readlines()
+diff --git a/usr/lib/linuxmint/mintMenu/plugins/places.py b/usr/lib/linuxmint/mintMenu/plugins/places.py
+index dc9d67b..de6b16d 100755
+--- a/usr/lib/linuxmint/mintMenu/plugins/places.py
++++ b/usr/lib/linuxmint/mintMenu/plugins/places.py
+@@ -167,7 +167,7 @@ class pluginclass( object ):
+ 			desktopDir = home + "/Desktop"
+ 			try:
+ 				import sys
+-				sys.path.append('/usr/lib/linuxmint/common')
++				sys.path.append('/usr/share/linuxmint/common')
+ 				from configobj import ConfigObj
+ 				config = ConfigObj(home + "/.config/user-dirs.dirs")
+ 				tmpdesktopDir = config['XDG_DESKTOP_DIR']

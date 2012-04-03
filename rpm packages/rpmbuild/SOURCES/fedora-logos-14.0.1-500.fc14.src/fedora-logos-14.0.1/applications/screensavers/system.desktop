@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Floating Fedora Bubbles
+Comment=Bubbles the Fedora logo around the screen
+Exec=floaters /usr/share/pixmaps/fedora-logo-sprite.svg
+TryExec=floaters
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GNOME;Screensaver

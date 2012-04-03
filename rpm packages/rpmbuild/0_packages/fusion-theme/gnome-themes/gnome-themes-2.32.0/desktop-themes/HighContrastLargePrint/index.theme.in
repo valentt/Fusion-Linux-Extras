@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+_Name=High Contrast Large Print
+_Comment=Large black-on-white text and icons
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=HighContrastLargePrint
+IconTheme=HighContrast
+MetacityTheme=Atlanta
+ApplicationFont=sans 18
+DocumentsFont=sans 18
+DesktopFont=sans 18
+WindowTitleFont=sans 18
+MonospaceFont=monospace 18
+CursorTheme=redglass
+CursorSize=48
+

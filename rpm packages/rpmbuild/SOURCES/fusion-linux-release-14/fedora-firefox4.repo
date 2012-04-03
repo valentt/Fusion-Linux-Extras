@@ -1,0 +1,5 @@
+[fedora-firefox4]
+name=Firefox 4 web browser and deps
+baseurl=http://repos.fedorapeople.org/repos/spot/firefox4/fedora-$releasever/$basearch/
+enabled=1
+gpgcheck=0

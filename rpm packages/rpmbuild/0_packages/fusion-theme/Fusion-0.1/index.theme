@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Fusion
+Type=X-GNOME-Metatheme
+Comment=Fusion Linux theme. \nMetacity borders are modified Alliance theme\nIcons are modified Faenza icons
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks
+MetacityTheme=Alliance-fusion-fancy
+IconTheme=Faenza-Fusion
+GtkColorScheme=base_color:#ffffff,fg_color:#000000,tooltip_fg_color:#000000,selected_bg_color:#86ABD9,selected_fg_color:#ffffff,text_color:#1A1A1A,bg_color:#EDECEB,tooltip_bg_color:#E7F3FD
+CursorTheme=dmz-aa
+CursorSize=24
+NotificationTheme=slider

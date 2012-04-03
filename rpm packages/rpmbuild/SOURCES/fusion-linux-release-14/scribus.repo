@@ -1,0 +1,8 @@
+[scribus]
+name=Scribus (Fedora_14)
+type=rpm-md
+baseurl=http://download.opensuse.org/repositories/home:/mrdocs/Fedora_14/
+gpgcheck=1
+gpgkey=http://download.opensuse.org/repositories/home:/mrdocs/Fedora_14/repodata/repomd.xml.key
+enabled=1
+includepkgs=scribus,libpodofo*
